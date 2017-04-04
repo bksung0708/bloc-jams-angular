@@ -1,6 +1,6 @@
 (function() {
-    function AlbumCtrl() {
-        this.albumData = angular.copy(albumPicasso);
+    function AlbumCtrl(Fixtures) {
+        this.albumData = Fixtures.getAlbum();
         this.current = 0;
         this.setCurrent = function(currentSong) {
             this.current = currentSong || 0;
@@ -9,5 +9,5 @@
     
     angular
         .module('blocjams')
-        .controller('AlbumCtrl', AlbumCtrl);
+        .controller('AlbumCtrl', ['Fixtures', AlbumCtrl]);
 })();

@@ -14,8 +14,8 @@
                  { title: 'Red', duration: '268.45', audioUrl: '/assets/music/red' },
                  { title: 'Pink', duration: '153.14', audioUrl: '/assets/music/pink' },
                  { title: 'Magenta', duration: '374.22', audioUrl: '/assets/music/magenta' }
-         ]
-     };
+            ]
+        };
  
          var albumMarconi = {
              title: 'The Telephone',
@@ -31,12 +31,16 @@
                  { title: 'Wrong phone number', duration: '2:15' }
              ]
          }; 
-        return Fixtures;
+        Fixtures.getAlbum = function() {
+            return albumPicasso;
+        };
+        return {
+            getAlbum: function() {
+                return albumPicasso;
+            }
+        } 
      }
      
-     Fixtures.getAlbum = function() {
-         return albumPicasso;
-     };
  
      angular
          .module('blocJams')

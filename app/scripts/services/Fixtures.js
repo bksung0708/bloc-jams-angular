@@ -46,5 +46,6 @@
  
      angular
          .module('blocJams')
+         //included private attribute 'Fixtures' to return content of album object
          .factory('Fixtures', Fixtures);
  })();
